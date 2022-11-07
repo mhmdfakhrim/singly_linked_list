@@ -33,10 +33,25 @@ namespace singly_linked_list
             {
                 if((START != null) &&(rollNo == START.rollnumber))
                 {
-                    Console.Writeline
+                    Console.Writeline();
+                    return;
                 }    
+                newnode.next = START;
+                START = newnode;
+                return;
             }
 
+            Node previous, current;
+            previous = START;
+            current = START;
+
+            while ((current != null)&&(rollNo == current.rollnumber))
+            {
+                if(rollNo == current.rollnumber)
+                {
+                    Console.Writeline
+                }
+            }
 
         }
     }
