@@ -178,7 +178,11 @@ namespace singly_linked_list
                         break;
                     }
                 }
-            }    
+            } 
+            catch(Exception)
+            {
+                Console.WriteLine("\nCheck for the value entered");
+            }
         }
     }
 }
