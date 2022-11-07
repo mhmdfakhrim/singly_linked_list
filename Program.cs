@@ -124,7 +124,7 @@ namespace singly_linked_list
                     Console.WriteLine("5. EXIT");
                     Console.Write("\nEnter your choice (1-5) : ");
                     char ch = Convert.ToChar(Console.ReadLine());
-                    switch(ch)
+                    switch (ch)
                     {
                         case '1':
                             {
@@ -145,7 +145,7 @@ namespace singly_linked_list
                                 if (obj.delNode(rollNo) == false)
                                     Console.WriteLine("\n Record not found.");
                                 else
-                                    Console.WriteLine("\n Record with roll number " + + rollNo + " Deleted");
+                                    Console.WriteLine("\n Record with roll number " + +rollNo + " Deleted");
                             }
                             break;
                         case '3':
@@ -153,9 +153,10 @@ namespace singly_linked_list
                                 obj.Traverse();
                             }
                             break;
+
                         case '4':
                             {
-                                if(obj.listEmpty() == true)
+                                if (obj.listEmpty() == true)
                                 {
                                     Console.WriteLine("\nList is empty");
                                     break;
@@ -163,26 +164,34 @@ namespace singly_linked_list
                                 Node previous, current;
                                 previous = current = null;
                                 Console.Write("\nEnter the roll number of the " + "Student whole record is to be searched: ");
+                                int num = Convert.ToInt32(Console.ReadLine());  
                                 if (obj.Search(num, ref previous, ref current) == false)
                                     Console.WriteLine("\nRecord not found");
-                                    Console.WriteLine("n\Roll number: " + current.rollnumber);
-                                    Console.WriteLine("\nName: " + current.name);
+                                Console.WriteLine("\nRoll number: " + current.rollnumber);
+                                Console.WriteLine("\nName: " + current.name);
                             }
                     }
+                
                     break;
-                    case '5':
-                        return;
-                    default:
-                        {
+                    
+                case '5';
+                    return;
+                    default;
+                    {
                         Console.WriteLine("\nInvalid Option");
                         break;
                     }
                 }
-            } 
-            catch(Exception)
+                catch (Exception)
+
+
+            }
+             
+            
             {
                 Console.WriteLine("\nCheck for the value entered");
             }
         }
     }
+}
 }
