@@ -1,4 +1,4 @@
-﻿
+﻿using System;
 
 namespace singly_linked_list
 {
@@ -23,9 +23,9 @@ namespace singly_linked_list
             int rollNo;
             string nm;
             Console.Write("\nEnter the roll number of the student:");
-            rollNo = Convert.ToInt32(Console.Readline());
+            rollNo = Convert.ToInt32(Console.ReadLine());
             Console.Write("\nEnter the roll number of the student:");
-            nm = Console.Readline();
+            nm = Console.ReadLine();
             Node newnode = new Node();
             newnode.rollnumber = rollNo;
             newnode.name = nm;
@@ -33,7 +33,7 @@ namespace singly_linked_list
             {
                 if ((START != null) && (rollNo == START.rollnumber))
                 {
-                    Console.Writeline();
+                    Console.WriteLine();
                     return;
                 }
                 newnode.next = START;
@@ -49,7 +49,7 @@ namespace singly_linked_list
             {
                 if (rollNo == current.rollnumber)
                 {
-                    Console.Writeline();
+                    Console.WriteLine();
                     return;
                 }
                 previous.next = current;
@@ -86,14 +86,23 @@ namespace singly_linked_list
         public void Traverse()
         {
             if (listEmpty())
-                Console.Writeline();
+                Console.WriteLine();
             else
             {
-                Console.Writeline();
+                Console.WriteLine();
                 Node currentNode;
                 for (currentNode = START; currentNode != null; currentNode = currentNode.next)
                     Console.Write(currentNode.rollnumber + " " + currentNode.name + "\n");
+                Console.WriteLine();
             }
+        }
+
+        public bool listEmpty()
+        {
+            if (START == null)
+                return true;
+            else
+                return false;
         }
     }
 
