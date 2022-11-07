@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace singly_linked_list
 {
@@ -139,7 +143,7 @@ namespace singly_linked_list
                                     Console.WriteLine("\nList is empty");
                                     break;
                                 }
-                                Console.WriteLine("Enter the roll number of" + "the student whose record is to be deleted");
+                                Console.WriteLine("Enter the roll number of" + " The student whose record is to be deleted: ");
                                 int rollNo = Convert.ToInt32(Console.ReadLine());
                                 Console.WriteLine();
                                 if (obj.delNode(rollNo) == false)
@@ -167,27 +171,30 @@ namespace singly_linked_list
                                 int num = Convert.ToInt32(Console.ReadLine());  
                                 if (obj.Search(num, ref previous, ref current) == false)
                                     Console.WriteLine("\nRecord not found");
-                                Console.WriteLine("\nRoll number: " + current.rollnumber);
-                                Console.WriteLine("\nName: " + current.name);
+                                else
+                                {
+                                    Console.WriteLine("\nRecord not found");
+                                    Console.WriteLine("\nRoll number: " + current.rollnumber);
+                                    Console.WriteLine("\nName: " + current.name);
                             }
                     }
                 
                     break;
-                    
-                case '5';
+
+                        case '5':
                     return;
-                    default;
+                        default:
                     {
                         Console.WriteLine("\nInvalid Option");
                         break;
                     }
                 }
-                catch (Exception)
-
-
+               
             }
-             
-            
+                catch(Exception)
+
+
+
             {
                 Console.WriteLine("\nCheck for the value entered");
             }
