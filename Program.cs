@@ -18,12 +18,19 @@ namespace singly_linked_list
         {
             START = null;
         }
-        public void addNote()
+        public void addNote() // add a node in the list
         {
             int rollNo;
             string nm;
-            Console.Write();
-            rollNo = ;
+            Console.Write("\nEnter the roll number of the student:");
+            rollNo = Convert.ToInt32(Console.Readline());
+            Console.Write("\nEnter the roll number of the student:");
+            nm = Console.Readline();
+            Node newnode = new Node();
+            newnode.rollnumber = rollNo;
+            newnode.name = nm;
+
+
         }
     }
 
