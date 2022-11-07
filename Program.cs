@@ -12,7 +12,19 @@ namespace singly_linked_list
 
     class list
     {
-
+        Node START;
+        
+        public list()
+        {
+            START = null;
+        }
+        public void addNote()
+        {
+            int rollNo;
+            string nm;
+            Console.Write();
+            rollNo = ;
+        }
     }
 
 
