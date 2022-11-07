@@ -29,6 +29,13 @@ namespace singly_linked_list
             Node newnode = new Node();
             newnode.rollnumber = rollNo;
             newnode.name = nm;
+            if (START == null || rollNo <= START.rollnumber)
+            {
+                if((START != null) &&(rollNo == START.rollnumber))
+                {
+                    Console.Writeline
+                }    
+            }
 
 
         }
