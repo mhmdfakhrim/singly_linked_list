@@ -69,6 +69,32 @@ namespace singly_linked_list
                 START = START.next;
             return true;
         }
+        public bool Search(int rollNO, ref Node previous, ref Node current)
+        {
+            previous = START;
+            current = START;
+            while ((current != null)&& (rollNO != current.rollnumber))
+            {
+                previous = current;
+                current = current.next;
+            }
+            if (current == null)
+                return false;
+            else
+                return true;
+        }
+        public void Traverse()
+        {
+            if (listEmpty())
+                Console.Writeline();
+            else
+            {
+                Console.Writeline();
+                Node currentNode;
+                for (currentNode = START; currentNode != null; currentNode = currentNode.next)
+                    Console.Write(currentNode.rollnumber + " " + currentNode.name + "\n");
+            }
+        }
     }
 
 
