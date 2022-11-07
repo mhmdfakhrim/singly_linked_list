@@ -173,6 +173,10 @@ namespace singly_linked_list
                     case '5':
                         return;
                     default:
+                        {
+                        Console.WriteLine("\nInvalid Option");
+                        break;
+                    }
                 }
             }    
         }
