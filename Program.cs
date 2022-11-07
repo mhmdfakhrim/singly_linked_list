@@ -140,8 +140,31 @@ namespace singly_linked_list
                                     break;
                                 }
                                 Console.WriteLine("Enter the roll number of" + "the student whose record is to be deleted");
-                                int roll
-                                if()
+                                int rollNo = Convert.ToInt32(Console.ReadLine());
+                                Console.WriteLine();
+                                if (obj.delNode(rollNo) == false)
+                                    Console.WriteLine("\n Record not found.");
+                                else
+                                    Console.WriteLine("\n Record with roll number " + + rollNo + " Deleted");
+                            }
+                            break;
+                        case '3':
+                            {
+                                obj.Traverse();
+                            }
+                            break;
+                        case '4':
+                            {
+                                if(obj.listEmpty() == true)
+                                {
+                                    Console.WriteLine("\nList is empty");
+                                    break;
+                                }
+                                Node previous, current;
+                                previous = current = null;
+                                Console.Write("\nEnter the roll number of the " + "Student whole record is to be searched: ");
+                                if (obj.Search(num, ref previous, ref current) == false)
+                                    Console.WriteLine
                             }
                     }
                 }
