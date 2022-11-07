@@ -164,9 +164,12 @@ namespace singly_linked_list
                                 previous = current = null;
                                 Console.Write("\nEnter the roll number of the " + "Student whole record is to be searched: ");
                                 if (obj.Search(num, ref previous, ref current) == false)
-                                    Console.WriteLine
+                                    Console.WriteLine("\nRecord not found");
+                                    Console.WriteLine("n\Roll number: " + current.rollnumber);
+                                    Console.WriteLine("\nName: " + current.name);
                             }
                     }
+                    break;
                 }
             }    
         }
